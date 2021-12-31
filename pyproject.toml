@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "project"
+version = "0.1.0"
+description = ""
+authors = ["Özkan ŞEN <ozkansen@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.12.2"
+black = "^21.12b0"
+isort = {extras = ["colors"], version = "^5.10.1"}
+mypy = "^0.930"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 100
+force_single_line = true
+src_paths = ["project", "tests"]
+virtual_env = ".venv"
+skip_gitignore=true
+py_version=38
+
+[tool.mypy]
+python_version = "3.8"
+follow_imports = "silent"
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+check_untyped_defs = true
+implicit_reexport = false
+disallow_any_generics = true
+disallow_untyped_defs = true
