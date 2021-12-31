@@ -1,4 +1,4 @@
-.PHONY: linter format format_diff test
+.PHONY: linter format format_diff test install
 linter:
 	- @echo "\nRUNNING PYLINT CHECKER"
 	- @poetry run pylint project tests
@@ -22,3 +22,6 @@ format_diff:
 
 test:
 	- @poetry run pytest .
+
+install:
+	- @poetry install
