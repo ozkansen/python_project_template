@@ -63,7 +63,7 @@ disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
 minversion = "6.2.5"
-addopts = "-n auto --cov=project tests --instafail -ra -q"
+addopts = "-n auto --cov=project tests --instafail -ra -q -vv"
 testpaths = [
     "tests"
 ]
