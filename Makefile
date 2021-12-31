@@ -1,4 +1,4 @@
-.PHONY: linter format format_diff test install
+.PHONY: linter format format_diff test install coverage
 linter:
 	- @echo "\nRUNNING PYLINT CHECKER"
 	- @poetry run pylint project tests
@@ -22,6 +22,9 @@ format_diff:
 
 test:
 	- @poetry run pytest .
+
+coverage:
+	- @poetry run pytest --cov-report=html .
 
 install:
 	- @poetry install
