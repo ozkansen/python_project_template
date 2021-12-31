@@ -32,6 +32,9 @@ exclude = '''
     \.git
   | \.mypy_cache
   | \.venv
+  | \.pytest_cache
+  | \.vscode
+  | htmlcov
 )/
 '''
 
