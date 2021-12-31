@@ -1,4 +1,4 @@
-.PHONY: linter format format_diff
+.PHONY: linter format format_diff test
 linter:
 	- @echo "\nRUNNING PYLINT CHECKER"
 	- @poetry run pylint project tests
@@ -19,3 +19,6 @@ format_diff:
 
 	- @echo "\nRUNNING BLACK FORMATTER"
 	- @poetry run black --diff --color .
+
+test:
+	- @poetry run pytest .
