@@ -23,6 +23,9 @@ format_diff:
 test:
 	- @poetry run pytest .
 
+test_github_actions_compatibility:
+	- @poetry run pytest -p no:sugar .
+
 coverage:
 	- @poetry run pytest --cov-report=html .
 
