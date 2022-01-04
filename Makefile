@@ -33,5 +33,10 @@ install:
 	- @poetry install
 
 export_requirements:
+	- @echo "\nEXPORTING BASE PACKAGES"
 	- @poetry export -f requirements.txt -o requirements/requirements.txt --without-hashes
+	- @cat requirements/requirements.txt | sed 's/[;].*//' | tee requirements/requirements.txt
+
+	- @echo "\nEXPORTING WITH DEV. PACKAGES"
 	- @poetry export -f requirements.txt -o requirements/requirements-dev.txt --without-hashes --dev
+	- @cat requirements/requirements-dev.txt | sed 's/[;].*//' | tee requirements/requirements-dev.txt
