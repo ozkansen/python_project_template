@@ -1,4 +1,4 @@
-.PHONY: linter format format_diff test install coverage
+.PHONY: linter format format_diff test install coverage export_requirements
 linter:
 	- @echo "\nRUNNING PYLINT CHECKER"
 	- @poetry run pylint project tests
@@ -31,3 +31,7 @@ coverage:
 
 install:
 	- @poetry install
+
+export_requirements:
+	- @poetry export -f requirements.txt -o requirements/requirements.txt --without-hashes
+	- @poetry export -f requirements.txt -o requirements/requirements-dev.txt --without-hashes --dev
