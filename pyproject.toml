@@ -11,7 +11,7 @@ python = "^3.8"
 pylint = "^2.12.2"
 black = "^21.12b0"
 isort = {extras = ["colors"], version = "^5.10.1"}
-mypy = "^0.930"
+mypy = "^0.931"
 pytest = "^6.2.5"
 pytest-xdist = "^2.5.0"
 pytest-instafail = "^0.4.2"
