@@ -59,6 +59,7 @@ check_untyped_defs = true
 implicit_reexport = false
 disallow_any_generics = true
 disallow_untyped_defs = true
+exclude = [".venv"]
 
 [tool.pytest.ini_options]
 minversion = "6.2.5"
