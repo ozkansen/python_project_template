@@ -2,9 +2,9 @@ astroid==2.9.3
 atomicwrites==1.4.0
 attrs==21.4.0
 black==22.1.0
-click==8.0.3
+click==8.0.4
 colorama==0.4.4
-coverage==6.3
+coverage==6.3.2
 execnet==1.9.0
 icdiff==2.0.4
 iniconfig==1.1.1
@@ -15,7 +15,7 @@ mypy-extensions==0.4.3
 mypy==0.931
 packaging==21.3
 pathspec==0.9.0
-platformdirs==2.4.1
+platformdirs==2.5.1
 pluggy==1.0.0
 pprintpp==0.4.0
 py==1.11.0
@@ -28,6 +28,6 @@ pytest-instafail==0.4.2
 pytest-xdist==2.5.0
 pytest==6.2.5
 toml==0.10.2
-tomli==2.0.0
-typing-extensions==4.0.1
+tomli==2.0.1
+typing-extensions==4.1.1
 wrapt==1.13.3
