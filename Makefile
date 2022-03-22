@@ -27,6 +27,8 @@ coverage:
 	- @poetry run pytest --cov-report=html .
 
 install:
+	- @virtualenv .venv --python 3.8
+	- @.venv/bin/pip install -U pip setuptools
 	- @poetry install
 
 export_requirements:
