@@ -11,8 +11,8 @@ python = "^3.8"
 pylint = "^2.12.2"
 black = "^22.1.0"
 isort = {extras = ["colors"], version = "^5.10.1"}
-mypy = "^0.931"
-pytest = "^6.2.5"
+mypy = "^0.941"
+pytest = "^7.1.1"
 pytest-xdist = "^2.5.0"
 pytest-instafail = "^0.4.2"
 pytest-icdiff = "^0.5"
@@ -62,7 +62,7 @@ disallow_untyped_defs = true
 exclude = [".venv"]
 
 [tool.pytest.ini_options]
-minversion = "6.2.5"
+minversion = "7.1.1"
 addopts = "-n auto --cov=project tests --instafail -ra -q -vv"
 testpaths = [
     "tests"
